@@ -1,0 +1,15 @@
+{
+  "name": "wheresthebooth_server",
+  "version": "1.0.0",
+  "description": "Server to help Greg VanOrt with his project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Booth",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.1"
+  }
+}

@@ -1,7 +1,10 @@
 var fs = require("fs");
 var express = require("express");
+var bodyParser = require("body-parser");
 
 var app = express();
+
+app.use(bodyParser.json());
 
 app.get("/",function(req, res){
 	fs.readFile("location.txt", function(err,data){
@@ -11,7 +14,9 @@ app.get("/",function(req, res){
 });
 
 app.post("/",function(req, res){
-	fs.writeFile("location.txt", req.body ,function(err,data){
+	console.log(req.body.dude);
+	var body = '';
+	fs.writeFile("location.txt", req.body.dude,function(err,data){
 		if(err) throw err;
 	});
 });
